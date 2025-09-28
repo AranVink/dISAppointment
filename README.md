@@ -34,6 +34,7 @@ AMD motherboards have been tested but are known not to work.
 | Asrock   | Z87M-Pro4      | ? | OK | [Confirmed by vsharun](https://www.vogons.org/viewtopic.php?p=1343053#p1343053)
 | Asrock   | B85M Pro4      | ? | OK | [Confirmed by vsharun](https://www.vogons.org/viewtopic.php?p=1343220#p1343220)
 | Gigabyte  | B85M D3H      | ? | OK | [Confirmed by vsharun](https://www.vogons.org/viewtopic.php?p=1343220#p1343220)
+RUBY-9719VG2AR [Confirmed by LSS10999](https://www.vogons.org/viewtopic.php?p=1245887#p1245887)
 
 ### Tested without success:
 | Brand    | Type           | LDRQ location     | Free IRQ status | Test status |
