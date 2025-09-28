@@ -18,9 +18,12 @@ Before using the sound card with the adapter, it needs to be initialized using S
 
 ## Supported motherboards
 You need a TPM header, with the LPC pins exposed. Most notable is the LDRQ pin, which is required to get IRQ working.
+On some motherboards there are pins that are marked as NC (no connect) that are actually connected to the LDRQ pin.
 
 For now only Intel motherboard with a pre-PCH100 chipset are known to expose these pins.
 The possibly latest/fastest are X99 motherboards, newer ones will probably never expose the correct pins since Intel dropped support after.
+
+AMD motherboards have been tested but are known not to work.
 
 ### Motherboards confirmed working:
 | Brand    | Type           | LDRQ location     | Free IRQ status | Test status |
@@ -44,7 +47,10 @@ The following boards have a DLRQ pin on the TPM header:
 | SuperMicro | X9DRL-3F  | TPM header        | Untested
 | SuperMicro | X10SKK-F  | TPM header        | Untested
 | SuperMicro | X10SAE    | TPM header        | Untested
+| SuperMicro | X10SLH    | TPM header        | Untested
+| SuperMicro | X10SRA    | TPM header        | Untested
 | Asrock     | Z87M Pro4 | Not on TPM header | Untested
+| RUBY-9719VG2AR | | | | Untested
 
 ## Unsupported motherboards
 The following board have a TPM header, but have DLRQ pins missing. Potentially these could be modded to support it, but this will require soldering a jumper wire somewhere on the board:
@@ -70,3 +76,8 @@ The following board have a TPM header, but have DLRQ pins missing. Potentially t
 * Asus P5KPL-VM
 * Biostar B75MU3B
 * Gigabyte GA-X58A-UD7`
+
+## Other interesting repositories
+
+[lpcexp](https://github.com/lss4/lpcexp)
+[Boardviewer, for looking up how pins are routed](http://boardviewer.net/)
